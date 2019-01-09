@@ -29,3 +29,20 @@ jenkins:
         DOCKER_REGISTRY: 546127682796.dkr.ecr.eu-west-1.amazonaws.com
         TILLER_NAMESPACE: kube-system
 prow: {}
+PipelineSecrets: {}
+controllerbuild: {}
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: yeti.redbullmediahouse.com
+    exposer: Ingress
+    http: "true"
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        DOCKER_REGISTRY: 546127682796.dkr.ecr.eu-west-1.amazonaws.com
+        TILLER_NAMESPACE: kube-system
+prow: {}
