@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := https://mit.jfrog.io/mit/helm
 DIR := "env"
 NAMESPACE := "jx-staging"
 OS := $(shell uname)
